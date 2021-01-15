@@ -3,7 +3,7 @@
 <launch>
 
   <!--- Run Challendge-1 -->
-  <include file="$(find larm)/launch/challendge-1.launch" />
+  <include file="$(find larm)/launch/challenge-1.launch" />
 
   <!--- Run AMCL -->
   <include file="$(find student_pkg)/launch/1_localization.launch" />
