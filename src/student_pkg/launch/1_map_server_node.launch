@@ -1,0 +1,5 @@
+<launch>
+    <!-- My Package launch file -->
+    <node pkg="map_server" type="map_server" args="/home/user/catkin_ws/src/student_pkg/maps/map1.yaml" name="MapServerLauncher"  output="screen">
+    </node>
+</launch>
