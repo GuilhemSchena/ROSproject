@@ -1,0 +1,9 @@
+<launch>
+	<!-- Nodes -->
+	<node name="find_object_2d" pkg="find_object_2d" type="find_object_2d" output="screen">
+		<remap from="image" to="/camera/rgb/image_raw"/>
+		<param name="gui" value="true" type="bool"/>
+		<param name="objects_path" value="/home/user/catkin_ws/src/student_pkg/images" type="str"/>
+		<param name="settings_path" value="/home/user/catkin_ws/src/student_pkg/find_object_config/find_coke.ini" type="str"/>
+	</node>
+</launch>
