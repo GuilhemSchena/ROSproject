@@ -2,7 +2,7 @@
 
 <launch>
 
-  <!--- Run Challendge-1 -->
+  <!--- Run Challenge-1 -->
   <include file="$(find larm)/launch/challenge-1.launch" />
 
   <!--- Run AMCL -->
