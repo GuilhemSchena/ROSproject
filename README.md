@@ -15,12 +15,28 @@ Groupe 007
 
 ### Challenge 1:
 
+Lancer la commande suivante, puis le téléop pour controller le robot.
+
 ````
 launch student_pkg navigation.launch
 ````
 
 ### Challenge 2:
 
+Lancer la commande suivante, le téléop pour controller le robot, et ouvrir l'interface graphique linux intégrée pour observer la détection des bouteilles.
+
 ````
 launch student_pkg 2_mapping.launch
+````
+
+Il est également possible d'observer la détection d'objets en temps réel dans la WebShell avec commande :
+````
+rostopic echo /objects
+````
+
+### Commandes utiles:
+
+````
+roslaunch rviz rviz
+roslaunch turtlebot_teleop keyboard_teleop.launch
 ````
