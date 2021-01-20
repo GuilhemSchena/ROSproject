@@ -15,11 +15,19 @@ Groupe 007
 
 ### Challenge 1:
 
-Lancer la commande suivante, puis le téléop pour controller le robot.
+Lancer la commande suivante, puis le téléop pour contrôler le robot.
 
 ````
 roslaunch student_pkg 1_navigation.launch
 ````
+Ouvrir rviz et la configuration localization.rviz
+
+````
+roslaunch rviz rviz
+````
+
+Localiser le robot sur la carte avec l'outil 2D pose estimate et vous pouvez envoyer des positions à atteindre avec l'outil 2D Nav Goal.
+Vous pouvez aussi afficher les local et global maps en cochant la case dans rviz.
 
 ### Challenge 2:
 
