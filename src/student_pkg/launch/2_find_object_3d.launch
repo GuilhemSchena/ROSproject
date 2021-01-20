@@ -4,7 +4,7 @@
 	
 	<node name="find_object_3d" pkg="find_object_2d" type="find_object_2d" output="screen">
 		<param name="gui" value="true" type="bool"/>
-		<param name="settings_path" value="/home/user/catkin_ws/src/student_pkg/find_object_config/find_coke.ini" type="str"/>
+		<param name="settings_path" value="/home/user/catkin_ws/src/student_pkg/find_object_config/find_coke2.ini" type="str"/>
 		<param name="subscribe_depth" value="true" type="bool"/>
 		<param name="objects_path" value="/home/user/catkin_ws/src/student_pkg/images" type="str"/>
 		<param name="object_prefix" value="object" type="str"/>
@@ -16,8 +16,9 @@
 	
 	<!-- Example of tf synchronisation with the objectsStamped message -->
 	<node name="tf_example" pkg="find_object_2d" type="tf_example" output="screen">
-		<param name="map_frame_id" value="/map" type="string"/>
+		<param name="map_frame_id" value="/odom" type="string"/>
 		<param name="object_prefix" value="object" type="str"/>
 	</node>
+
 
 </launch>
