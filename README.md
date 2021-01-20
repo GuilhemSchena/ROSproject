@@ -48,12 +48,12 @@ Ouvrir rviz et la configuration localization.rviz
 roslaunch rviz rviz
 ````
 
-Localiser le robot sur la carte avec l'outil 2D pose estimate et vous pouvez envoyer des positions à atteindre avec l'outil 2D Nav Goal.
+Localiser le robot sur la carte avec l'outil 2D pose estimate. Vous pouvez envoyer des positions à atteindre avec l'outil 2D Nav Goal.
 Vous pouvez aussi afficher les local et global maps en cochant la case dans rviz.
 
 ### Challenge 2:
 
-Lancer la commande suivante, le téléop pour controller le robot, et ouvrir l'interface graphique linux intégrée pour observer la détection des bouteilles sur l'interface graphique intégrée !
+Lancer la commande suivante, le téléop pour contrôler le robot, et ouvrir l'interface graphique linux intégrée pour observer la détection des bouteilles sur l'interface graphique intégrée !
 
 ````
 roslaunch student_pkg 2_mapping.launch
