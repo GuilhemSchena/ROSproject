@@ -9,8 +9,26 @@ Groupe 007
 ## Processus d'installation général
 
 * Créer un nouveau projet Kinetic
-* Importer et compiler le simulation_ws des professeurs : https://github.com/ceri-num/LARM-RDS-Simulation-WS
+* Importer et compiler le simulation_ws des professeurs : https://github.com/ceri-num/LARM-RDS-Simulation-WS :
+
+````
+rm -fr simulation_ws
+git clone https://github.com/ceri-num/LARM-RDS-Simulation-WS.git simulation_ws
+cd simulation_ws
+catkin_make
+source devel/setup.bash
+````
+
 * Répeter le processus pour le catkin_ws du projet
+
+````
+rm -fr catkin_ws
+git clone https://github.com/GuilhemSchena/ROSproject catkin_ws
+cd catkin_ws
+catkin_make
+source devel/setup.bash
+````
+
 * Pour chaque projet, une démo est disponible avec la commande suivante.
 
 ### Challenge 1:
