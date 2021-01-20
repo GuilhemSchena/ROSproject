@@ -45,4 +45,7 @@
       <param name="lasamplerange" value="0.005"/>
       <param name="lasamplestep" value="0.005"/>
     </node>
+
+    <!--- Run AMCL -->
+  <!---<include file="$(find student_pkg)/launch/2_localization.launch" />-->
 </launch>
