@@ -18,12 +18,12 @@ Groupe 007
 Lancer la commande suivante, puis le téléop pour controller le robot.
 
 ````
-launch student_pkg navigation.launch
+launch student_pkg 1_navigation.launch
 ````
 
 ### Challenge 2:
 
-Lancer la commande suivante, le téléop pour controller le robot, et ouvrir l'interface graphique linux intégrée pour observer la détection des bouteilles.
+Lancer la commande suivante, le téléop pour controller le robot, et ouvrir l'interface graphique linux intégrée pour observer la détection des bouteilles sur l'interface graphique intégrée !
 
 ````
 launch student_pkg 2_mapping.launch
