@@ -18,7 +18,7 @@ Groupe 007
 Lancer la commande suivante, puis le téléop pour controller le robot.
 
 ````
-launch student_pkg 1_navigation.launch
+roslaunch student_pkg 1_navigation.launch
 ````
 
 ### Challenge 2:
@@ -26,7 +26,7 @@ launch student_pkg 1_navigation.launch
 Lancer la commande suivante, le téléop pour controller le robot, et ouvrir l'interface graphique linux intégrée pour observer la détection des bouteilles sur l'interface graphique intégrée !
 
 ````
-launch student_pkg 2_mapping.launch
+roslaunch student_pkg 2_mapping.launch
 ````
 
 Il est également possible d'observer la détection d'objets en temps réel dans la WebShell avec commande :
