@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<launch>
+
+ <!--- Run Challenge-3 -->
+     <!---<include file="$(find larm)/launch/challenge-3.launch" />-->
+
+  <!--- Run find_object -->
+    <include file="$(find student_pkg)/launch/2_find_object_3d.launch" />
+
+<!--- Run move_base node -->
+    <include file="$(find student_pkg)/launch/3_move_base.launch" />
+
+
+    <include file="$(find student_pkg)/launch/3_mapping.launch" />
+
+</launch>

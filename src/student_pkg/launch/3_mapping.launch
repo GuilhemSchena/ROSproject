@@ -1,18 +1,6 @@
 <?xml version="1.0"?>
 
 <launch>
-
- <!--- Run Challenge-2 -->
-    <include file="$(find larm)/launch/challenge-2.launch" />
-
-  <!--- Run find_object -->
-    <include file="$(find student_pkg)/launch/2_find_object_3d.launch" />
-
-
-<!--- Run move_base node -->
-    <include file="$(find student_pkg)/launch/2_move_base.launch" />
-
-
     <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
       <!-- simulation remap from="scan" to="/hokuyo_laser_topic"/ -->
       <!-- real -->
