@@ -3,7 +3,7 @@
 <launch>
 
  <!--- Run Challenge-2 -->
-    <include file="$(find larm)/launch/challenge-2.launch" />
+    <!---<include file="$(find larm)/launch/challenge-2.launch" />-->
 
   <!--- Run find_object -->
     <include file="$(find student_pkg)/launch/2_find_object_3d.launch" />
@@ -50,6 +50,6 @@
       <param name="lasamplestep" value="0.005"/>
     </node>
 
-    <!--- Run AMCL -->
-  <!---<include file="$(find student_pkg)/launch/2_localization.launch" />-->
+   <!--- Run bottle node -->
+   <node pkg="student_pkg" type="2_bottle.py" name="bottled" output="screen"/>
 </launch>

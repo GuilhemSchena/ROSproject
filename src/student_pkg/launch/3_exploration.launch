@@ -13,5 +13,8 @@
 
 
     <include file="$(find student_pkg)/launch/3_mapping.launch" />
+    
+    <!--- Run bottle node -->
+   <node pkg="student_pkg" type="2_bottle.py" name="bottled" output="screen"/>
 
 </launch>

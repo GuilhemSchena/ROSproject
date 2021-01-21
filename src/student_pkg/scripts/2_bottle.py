@@ -38,7 +38,7 @@ def callback(msg):
             try :
                 tf_transformer.waitForTransform(odom,obj_frame,rospy.Time(0), rospy.Duration(4.0))
                 (trans,rot) = tf_transformer.lookupTransform(odom, obj_frame, rospy.Time(0))
-                print obj_frame, trans
+                #print obj_frame, trans
                 publish_content = str(obj_frame) + " " + str(trans)
 
             except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
@@ -58,16 +58,12 @@ def callback(msg):
 def obj_listener():
     global publish_content
 
-    print "test"
-
     rospy.init_node('bottle_analyzer', anonymous=True)
 
     pub = rospy.Publisher('bottle', String, queue_size=10)
     rate = rospy.Rate(5)
 
     rospy.Subscriber("objectsStamped", ObjectsStamped, callback)
-
-    print "oui"
 
     while not rospy.is_shutdown():
         
