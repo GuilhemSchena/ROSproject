@@ -9,7 +9,11 @@ prefix = "object"
 target_frame = "/camera_depth_optical_frame"
 odom = "/odom"
 
+publish_content = ""
+
 def callback(msg):
+    global publish_content
+
 
     #print "test2"
 
@@ -19,15 +23,26 @@ def callback(msg):
     objects = msg.objects
     data = objects.data
 
-    obj_frame = prefix + "_" + str(int(data[0]))
-    
-    #print stamp, obj_frame
+    if len(data) != 0 :
 
-    tf_transformer = tf.TransformListener()
-    rate = rospy.Rate(1.0) #buffering ?
+        for i in range(0, len(data), 12):
 
-    (trans,rot) = tf_transformer.lookupTransform(target_frame, obj_frame, rospy.Time(0))
-    print obj_frame, trans
+            obj_frame = prefix + "_" + str(int(data[i]))
+            
+            #print stamp, obj_frame
+
+            tf_transformer = tf.TransformListener()
+
+            #print tf_transformer.allFramesAsString()
+
+            try :
+                tf_transformer.waitForTransform(odom,obj_frame,rospy.Time(0), rospy.Duration(4.0))
+                (trans,rot) = tf_transformer.lookupTransform(odom, obj_frame, rospy.Time(0))
+                print obj_frame, trans
+                publish_content = str(obj_frame) + " " + str(trans)
+
+            except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
+                pass
 
     #try:
     #    (trans,rot) = tf_transformer.lookupTransform(odom, obj_frame, rospy.Time(0))
@@ -41,17 +56,26 @@ def callback(msg):
 
     
 def obj_listener():
+    global publish_content
 
     print "test"
 
-    rospy.init_node('bottle', anonymous=True)
+    rospy.init_node('bottle_analyzer', anonymous=True)
+
+    pub = rospy.Publisher('bottle', String, queue_size=10)
+    rate = rospy.Rate(5)
 
     rospy.Subscriber("objectsStamped", ObjectsStamped, callback)
 
     print "oui"
 
-    # spin() simply keeps python from exiting until this node is stopped
-    rospy.spin()
+    while not rospy.is_shutdown():
+        
+        pub.publish(publish_content)
+        
+        rate.sleep()
+
+        
 
 if __name__ == '__main__':
     obj_listener()
