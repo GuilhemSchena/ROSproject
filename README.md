@@ -50,6 +50,10 @@ Vous pouvez aussi afficher les local et global maps en cochant la case dans rviz
 
 ### Challenge 2:
 
+Lancer le challenge 2 :
+````
+roslaunch larm challenge-2.launch
+````
 Lancer la commande suivante, le téléop pour contrôler le robot, et ouvrir l'interface graphique linux intégrée pour observer la détection des bouteilles sur l'interface graphique intégrée !
 
 ````
