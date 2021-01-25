@@ -88,6 +88,7 @@ Lancer 3_exploration.launch :
 ````
 roslaunch student_pkg 3_exploration.launch
 ````
+Un script va être lancé et va définir un périmètre dans lequel le robot est censé se déplacer en autonomie
 
 Vous pouvez lancer Rviz et charger la configuration exploration.rviz
 ````
