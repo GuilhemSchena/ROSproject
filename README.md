@@ -28,8 +28,6 @@ catkin_make
 source devel/setup.bash
 ````
 
-* Pour chaque projet, une démo est disponible avec la commande suivante.
-
 ### Challenge 1:
 
 Lancer la commande suivante (qui lance aussi le challenge-1.launch), puis le téléop pour contrôler le robot. 
@@ -58,7 +56,7 @@ Lancer la commande suivante, le téléop pour contrôler le robot, et ouvrir l'i
 roslaunch student_pkg 2_mapping.launch
 ````
 
-Vous pouvez lancer Rviz et charger la configuration (PRECISER LAQUELLLLE)
+Vous pouvez lancer Rviz et charger la configuration mapping.rviz
 ````
 roslaunch rviz rviz
 ````
@@ -87,9 +85,14 @@ Lancer 3_exploration.launch :
 roslaunch student_pkg 3_exploration.launch
 ````
 
-Vous pouvez lancer Rviz et charger la configuration (PRECISER LAQUELLLLE)
+Vous pouvez lancer Rviz et charger la configuration exploration.rviz
 ````
 roslaunch rviz rviz
+````
+
+Il est également possible d'observer la détection d'objets en temps réel dans la WebShell avec la commande :
+````
+rostopic echo /objects
 ````
 
 
